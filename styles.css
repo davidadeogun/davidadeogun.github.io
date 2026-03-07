@@ -680,3 +680,109 @@
       .nav-links { display: none; }
       footer { padding: 1.5rem; flex-direction: column; gap: 0.5rem; text-align: center; }
     }
+
+/* RESUME */
+.resume-download {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding: 1.5rem 2rem;
+  border: 1px solid var(--border);
+  background: var(--bg2);
+  margin-bottom: 3rem;
+}
+
+.resume-download-text {
+  font-family: var(--mono);
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  letter-spacing: 0.05em;
+  flex: 1;
+}
+
+.resume-cols {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+.resume-col-title {
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--amber);
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.resume-entry {
+  margin-bottom: 2rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+}
+
+.resume-entry:last-child {
+  border-bottom: none;
+}
+
+.resume-entry-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 0.8rem;
+}
+
+.resume-role {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 0.2rem;
+}
+
+.resume-company {
+  font-family: var(--mono);
+  font-size: 0.75rem;
+  color: var(--amber-dim);
+  letter-spacing: 0.05em;
+}
+
+.resume-date {
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  white-space: nowrap;
+  padding-top: 0.2rem;
+}
+
+.resume-bullets {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.resume-bullets li {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  padding-left: 1rem;
+  position: relative;
+  line-height: 1.6;
+}
+
+.resume-bullets li::before {
+  content: '—';
+  position: absolute;
+  left: 0;
+  color: var(--amber);
+  font-size: 0.75rem;
+}
+
+@media (max-width: 900px) {
+  .resume-cols { grid-template-columns: 1fr; gap: 2rem; }
+  .resume-download { flex-direction: column; align-items: flex-start; gap: 1rem; }
+}
