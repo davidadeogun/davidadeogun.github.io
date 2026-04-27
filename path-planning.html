@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Path Planning — David Adeogun</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="index.html" class="nav-logo">David Adeogun</a>
+  <ul class="nav-links">
+    <li><a href="index.html#about">About</a></li>
+    <li><a href="index.html#skills">Skills</a></li>
+    <li><a href="index.html#resume">Resume</a></li>
+    <li><a href="index.html#research">Research</a></li>
+    <li><a href="projects.html" class="nav-active">Projects</a></li>
+    <li><a href="index.html#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="hero-grid"></div>
+  <div class="hero-glow"></div>
+  <div class="page-hero-content">
+    <div class="breadcrumb">
+      <a href="index.html">Portfolio</a>
+      <span class="breadcrumb-sep">›</span>
+      <a href="projects.html">Projects</a>
+      <span class="breadcrumb-sep">›</span>
+      <span class="breadcrumb-current">Path Planning</span>
+    </div>
+    <div class="hero-tag">Projects · 05</div>
+    <h1><span>Path Planning</span></h1>
+    <p>
+      Autonomous navigation, trajectory optimization, and motion planning
+      algorithms for mobile and manipulator robots.
+    </p>
+  </div>
+</section>
+
+<!-- IMAGE GALLERY -->
+<section>
+  <div class="section-label">01 — Image Gallery</div>
+  <h2 class="section-title">Gallery</h2>
+  <div class="gallery-grid">
+
+    <div class="gallery-slot" id="slot-1">
+      <div class="gallery-img-area">
+        <img class="gallery-img" src="" alt="Gallery image 1">
+        <div class="gallery-placeholder">
+          <div class="gallery-placeholder-icon">+</div>
+          <span>No image uploaded</span>
+        </div>
+      </div>
+      <div class="gallery-meta">
+        <input type="text" class="gallery-caption-input" placeholder="Add a caption…">
+        <label class="upload-trigger">
+          Upload Image
+          <input type="file" accept="image/*" class="gallery-file-input" style="display:none">
+        </label>
+      </div>
+    </div>
+
+    <div class="gallery-slot" id="slot-2">
+      <div class="gallery-img-area">
+        <img class="gallery-img" src="" alt="Gallery image 2">
+        <div class="gallery-placeholder">
+          <div class="gallery-placeholder-icon">+</div>
+          <span>No image uploaded</span>
+        </div>
+      </div>
+      <div class="gallery-meta">
+        <input type="text" class="gallery-caption-input" placeholder="Add a caption…">
+        <label class="upload-trigger">
+          Upload Image
+          <input type="file" accept="image/*" class="gallery-file-input" style="display:none">
+        </label>
+      </div>
+    </div>
+
+    <div class="gallery-slot" id="slot-3">
+      <div class="gallery-img-area">
+        <img class="gallery-img" src="" alt="Gallery image 3">
+        <div class="gallery-placeholder">
+          <div class="gallery-placeholder-icon">+</div>
+          <span>No image uploaded</span>
+        </div>
+      </div>
+      <div class="gallery-meta">
+        <input type="text" class="gallery-caption-input" placeholder="Add a caption…">
+        <label class="upload-trigger">
+          Upload Image
+          <input type="file" accept="image/*" class="gallery-file-input" style="display:none">
+        </label>
+      </div>
+    </div>
+
+    <div class="gallery-slot" id="slot-4">
+      <div class="gallery-img-area">
+        <img class="gallery-img" src="" alt="Gallery image 4">
+        <div class="gallery-placeholder">
+          <div class="gallery-placeholder-icon">+</div>
+          <span>No image uploaded</span>
+        </div>
+      </div>
+      <div class="gallery-meta">
+        <input type="text" class="gallery-caption-input" placeholder="Add a caption…">
+        <label class="upload-trigger">
+          Upload Image
+          <input type="file" accept="image/*" class="gallery-file-input" style="display:none">
+        </label>
+      </div>
+    </div>
+
+    <div class="gallery-slot" id="slot-5">
+      <div class="gallery-img-area">
+        <img class="gallery-img" src="" alt="Gallery image 5">
+        <div class="gallery-placeholder">
+          <div class="gallery-placeholder-icon">+</div>
+          <span>No image uploaded</span>
+        </div>
+      </div>
+      <div class="gallery-meta">
+        <input type="text" class="gallery-caption-input" placeholder="Add a caption…">
+        <label class="upload-trigger">
+          Upload Image
+          <input type="file" accept="image/*" class="gallery-file-input" style="display:none">
+        </label>
+      </div>
+    </div>
+
+    <div class="gallery-slot" id="slot-6">
+      <div class="gallery-img-area">
+        <img class="gallery-img" src="" alt="Gallery image 6">
+        <div class="gallery-placeholder">
+          <div class="gallery-placeholder-icon">+</div>
+          <span>No image uploaded</span>
+        </div>
+      </div>
+      <div class="gallery-meta">
+        <input type="text" class="gallery-caption-input" placeholder="Add a caption…">
+        <label class="upload-trigger">
+          Upload Image
+          <input type="file" accept="image/*" class="gallery-file-input" style="display:none">
+        </label>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- RESEARCH PAPERS -->
+<section class="skills-bg">
+  <div class="section-label">02 — Research Papers</div>
+  <h2 class="section-title">Research Papers</h2>
+  <div class="pdf-upload-row">
+    <label class="upload-trigger">
+      Upload PDF
+      <input type="file" accept=".pdf" id="pdf-input" multiple style="display:none">
+    </label>
+  </div>
+  <div class="pdf-list" id="pdf-list">
+    <div class="empty-state" id="pdf-empty">
+      <p>No papers uploaded yet — use the button above to add PDFs.</p>
+    </div>
+  </div>
+</section>
+
+<!-- EXTERNAL LINKS -->
+<section>
+  <div class="section-label">03 — Links &amp; Resources</div>
+  <h2 class="section-title">Links &amp; Resources</h2>
+  <div class="link-input-row">
+    <input type="text"  id="link-label-input" class="text-input" placeholder="Label / description">
+    <input type="url"   id="link-url-input"   class="text-input" placeholder="https://…">
+    <button class="btn-primary" onclick="addLink()">Add Link</button>
+  </div>
+  <div class="link-list" id="link-list">
+    <div class="empty-state" id="link-empty">
+      <p>No links added yet — paste a URL above and click Add Link.</p>
+    </div>
+  </div>
+</section>
+
+<script>
+(function () {
+  document.querySelectorAll('.gallery-slot').forEach(function (slot) {
+    var input = slot.querySelector('.gallery-file-input');
+    var img   = slot.querySelector('.gallery-img');
+    input.addEventListener('change', function () {
+      if (this.files && this.files[0]) {
+        img.src = URL.createObjectURL(this.files[0]);
+        slot.classList.add('has-image');
+      }
+    });
+  });
+
+  document.getElementById('pdf-input').addEventListener('change', function () {
+    var list  = document.getElementById('pdf-list');
+    var empty = document.getElementById('pdf-empty');
+    Array.from(this.files).forEach(function (file) {
+      if (empty) { empty.style.display = 'none'; }
+      var url   = URL.createObjectURL(file);
+      var entry = document.createElement('div');
+      entry.className = 'pdf-entry';
+      var name  = document.createElement('span');
+      name.className   = 'pdf-name';
+      name.textContent = file.name;
+      var btn   = document.createElement('a');
+      btn.href         = url;
+      btn.target       = '_blank';
+      btn.rel          = 'noopener noreferrer';
+      btn.className    = 'pdf-view-btn';
+      btn.textContent  = 'View';
+      entry.appendChild(name);
+      entry.appendChild(btn);
+      list.appendChild(entry);
+    });
+    this.value = '';
+  });
+
+  function sanitizeUrl(raw) {
+    var trimmed = raw.trim();
+    return /^https?:\/\//i.test(trimmed) ? trimmed : 'https://' + trimmed;
+  }
+
+  window.addLink = function () {
+    var labelInput = document.getElementById('link-label-input');
+    var urlInput   = document.getElementById('link-url-input');
+    var rawUrl = urlInput.value.trim();
+    if (!rawUrl) return;
+    var url   = sanitizeUrl(rawUrl);
+    var label = labelInput.value.trim() || rawUrl;
+
+    var list  = document.getElementById('link-list');
+    var empty = document.getElementById('link-empty');
+    if (empty) { empty.style.display = 'none'; }
+
+    var entry = document.createElement('a');
+    entry.href      = url;
+    entry.target    = '_blank';
+    entry.rel       = 'noopener noreferrer';
+    entry.className = 'link-entry';
+
+    var labelEl = document.createElement('span');
+    labelEl.className   = 'link-entry-label';
+    labelEl.textContent = label;
+
+    var urlEl = document.createElement('span');
+    urlEl.className   = 'link-entry-url';
+    urlEl.textContent = url;
+
+    var arrow = document.createElement('span');
+    arrow.className   = 'link-entry-arrow';
+    arrow.textContent = '→';
+
+    entry.appendChild(labelEl);
+    entry.appendChild(urlEl);
+    entry.appendChild(arrow);
+    list.appendChild(entry);
+
+    labelInput.value = '';
+    urlInput.value   = '';
+  };
+
+  document.getElementById('link-url-input').addEventListener('keydown', function (e) {
+    if (e.key === 'Enter') window.addLink();
+  });
+}());
+</script>
+
+</body>
+</html>
