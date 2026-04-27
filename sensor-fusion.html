@@ -153,16 +153,19 @@
 <section class="skills-bg">
   <div class="section-label">02 — Research Papers</div>
   <h2 class="section-title">Research Papers</h2>
-  <div class="pdf-upload-row">
-    <label class="upload-trigger">
-      Upload PDF
-      <input type="file" accept=".pdf" id="pdf-input" multiple style="display:none">
-    </label>
-  </div>
-  <div class="pdf-list" id="pdf-list">
-    <div class="empty-state" id="pdf-empty">
-      <p>No papers uploaded yet — use the button above to add PDFs.</p>
+  <div class="pdf-list">
+
+    <!-- To add a paper, duplicate and fill in a pdf-entry block:
+    <div class="pdf-entry">
+      <span class="pdf-name">Paper Title</span>
+      <a href="https://link-to-paper" target="_blank" rel="noopener noreferrer" class="pdf-view-btn">View</a>
     </div>
+    -->
+
+    <div class="empty-state">
+      <p>No papers added yet.</p>
+    </div>
+
   </div>
 </section>
 
@@ -170,86 +173,22 @@
 <section>
   <div class="section-label">03 — Links &amp; Resources</div>
   <h2 class="section-title">Links &amp; Resources</h2>
-  <div class="link-input-row">
-    <input type="text"  id="link-label-input" class="text-input" placeholder="Label / description">
-    <input type="url"   id="link-url-input"   class="text-input" placeholder="https://…">
-    <button class="btn-primary" onclick="addLink()">Add Link</button>
-  </div>
-  <div class="link-list" id="link-list">
-    <div class="empty-state" id="link-empty">
-      <p>No links added yet — paste a URL above and click Add Link.</p>
+  <div class="link-list">
+
+    <!-- To add a link, duplicate and fill in a link-entry block:
+    <a href="https://your-url.com" target="_blank" rel="noopener noreferrer" class="link-entry">
+      <span class="link-entry-label">Label</span>
+      <span class="link-entry-url">https://your-url.com</span>
+      <span class="link-entry-arrow">→</span>
+    </a>
+    -->
+
+    <div class="empty-state">
+      <p>No links added yet.</p>
     </div>
+
   </div>
 </section>
-
-<script>
-(function () {
-  document.getElementById('pdf-input').addEventListener('change', function () {
-    var list  = document.getElementById('pdf-list');
-    var empty = document.getElementById('pdf-empty');
-    Array.from(this.files).forEach(function (file) {
-      if (empty) { empty.style.display = 'none'; }
-      var url   = URL.createObjectURL(file);
-      var entry = document.createElement('div');
-      entry.className = 'pdf-entry';
-      var name  = document.createElement('span');
-      name.className   = 'pdf-name';
-      name.textContent = file.name;
-      var btn   = document.createElement('a');
-      btn.href         = url;
-      btn.target       = '_blank';
-      btn.rel          = 'noopener noreferrer';
-      btn.className    = 'pdf-view-btn';
-      btn.textContent  = 'View';
-      entry.appendChild(name);
-      entry.appendChild(btn);
-      list.appendChild(entry);
-    });
-    this.value = '';
-  });
-
-  function sanitizeUrl(raw) {
-    var trimmed = raw.trim();
-    return /^https?:\/\//i.test(trimmed) ? trimmed : 'https://' + trimmed;
-  }
-
-  window.addLink = function () {
-    var labelInput = document.getElementById('link-label-input');
-    var urlInput   = document.getElementById('link-url-input');
-    var rawUrl = urlInput.value.trim();
-    if (!rawUrl) return;
-    var url   = sanitizeUrl(rawUrl);
-    var label = labelInput.value.trim() || rawUrl;
-    var list  = document.getElementById('link-list');
-    var empty = document.getElementById('link-empty');
-    if (empty) { empty.style.display = 'none'; }
-    var entry = document.createElement('a');
-    entry.href      = url;
-    entry.target    = '_blank';
-    entry.rel       = 'noopener noreferrer';
-    entry.className = 'link-entry';
-    var labelEl = document.createElement('span');
-    labelEl.className   = 'link-entry-label';
-    labelEl.textContent = label;
-    var urlEl = document.createElement('span');
-    urlEl.className   = 'link-entry-url';
-    urlEl.textContent = url;
-    var arrow = document.createElement('span');
-    arrow.className   = 'link-entry-arrow';
-    arrow.textContent = '→';
-    entry.appendChild(labelEl);
-    entry.appendChild(urlEl);
-    entry.appendChild(arrow);
-    list.appendChild(entry);
-    labelInput.value = '';
-    urlInput.value   = '';
-  };
-
-  document.getElementById('link-url-input').addEventListener('keydown', function (e) {
-    if (e.key === 'Enter') window.addLink();
-  });
-}());
-</script>
 
 </body>
 </html>
