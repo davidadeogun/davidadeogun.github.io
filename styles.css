@@ -1004,6 +1004,19 @@ a.nav-logo {
 .gallery-caption-input::placeholder { color: var(--text-muted); opacity: 0.6; }
 .gallery-caption-input:focus { border-bottom-color: var(--amber); }
 
+.gallery-caption {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+.gallery-filepath {
+  font-family: var(--mono);
+  font-size: 0.63rem;
+  color: rgba(245,166,35,0.4);
+  letter-spacing: 0.06em;
+}
+
 /* UPLOAD TRIGGER (shared by image + PDF) */
 .upload-trigger {
   display: inline-flex;
